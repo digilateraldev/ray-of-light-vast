@@ -1,4 +1,4 @@
-# ray-of-light   (Children Day)
+# ray-of-light   (DIGILATERAL)
 
 
 Both Script perform same logic but on different template and background 
