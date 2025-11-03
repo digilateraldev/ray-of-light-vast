@@ -1,0 +1,11 @@
+rembg
+moviepy
+opencv-python
+pillow
+deepfilternet
+numpy
+ffmpeg-python
+pydub
+librosa
+mediapipe
+soundfile
