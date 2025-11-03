@@ -10,3 +10,4 @@ librosa
 mediapipe
 soundfile
 sox
+onnxruntime-gpu
