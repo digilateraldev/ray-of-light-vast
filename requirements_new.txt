@@ -9,3 +9,4 @@ pydub
 librosa
 mediapipe
 soundfile
+sox
