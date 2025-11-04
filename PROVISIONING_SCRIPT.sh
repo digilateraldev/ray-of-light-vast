@@ -14,7 +14,7 @@ sudo apt update
 sudo apt install -y imagemagick sox
 
 # Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+echo | curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Source the Rust environment variables
 source $HOME/.cargo/env
