@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Change Directory
+cd /workspace
+
 # Clone the repository
 git clone https://github.com/digilateraldev/ray-of-light-vast.git
 
