@@ -28,7 +28,7 @@ import time
 from datetime import timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import multiprocessing
-
+import json
 # from moviepy.config import change_settings
 # change_settings({"IMAGEMAGICK_BINARY": 'imagemagick'})
 
@@ -562,10 +562,6 @@ def merge_audio_video(video_no_audio_path, audio_path, output_video_path):
     except Exception as e:
         print(f"Failed to merge audio and video using moviepy. Error: {e}")
 
-
-
-
-
 # Function to overlay rembg image onto bg.png and template.png
 
 
@@ -644,7 +640,15 @@ if __name__ == "__main__":
     args = parser.parse_args()
     try:
         starttime=time.time()
-        startpoint(args.video_path, args.output_video, args.text1, args.text2, args.text3, args.intensity)
+        # vid_path=rotate_video(args.video_path,f'{args.video_path}_rotated.mp4')
+        vid_path=os.path.join(temp_folder,'rotated_video.mp4')
+        cmd = [
+        "ffmpeg",
+        "-i", args.video_path,
+        "-c:a", "copy", vid_path
+        ]
+        subprocess.run(cmd)
+        startpoint(vid_path, args.output_video, args.text1, args.text2, args.text3, args.intensity)
     finally:
         endtime=time.time()
         elapsed_time=endtime-starttime
