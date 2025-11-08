@@ -11,13 +11,7 @@ cd ray-of-light-vast
 
 # Install dependencies
 sudo apt update
-sudo apt install -y imagemagick sox
-
-# Install Rust
-cd ray-of-light-vast/ && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-# Source the Rust environment variables
-cd ray-of-light-vast/ && source $HOME/.cargo/env
+sudo apt install -y imagemagick sox cargo
 
 # Install Python dependencies
 
